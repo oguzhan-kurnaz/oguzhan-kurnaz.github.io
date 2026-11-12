@@ -1,6 +1,6 @@
 # Server-side demos (Hugging Face Spaces)
 
-Most Speech Apps demos (`demos.html`) run entirely in the browser (see `assets/js/lab-worker.js`):
+Most Speech Apps demos (`speech-apps.html`) run entirely in the browser (see `assets/js/lab-worker.js`):
 spectrogram, speech recognition (Whisper), text-to-speech (Piper), speaker verification (WavLM) and
 deepfake detection (AASIST, `assets/models/aasist.onnx`). They need no server.
 

@@ -12,5 +12,5 @@ license: mit
 short_description: kNN-VC any-to-any voice conversion demo
 ---
 
-Voice conversion backend for https://okurnaz2516.github.io/demos.html#conversion.
+Voice conversion backend for https://oguzhan-kurnaz.github.io/speech-apps.html#conversion.
 Uses [kNN-VC](https://github.com/bshall/knn-vc) (Baas et al., Interspeech 2023); weights are downloaded via `torch.hub` on startup.

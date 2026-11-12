@@ -12,7 +12,7 @@ license: other
 short_description: XTTS-v2 zero-shot voice-cloning TTS demo
 ---
 
-Voice-cloning TTS backend for https://okurnaz2516.github.io/demos.html#cloning.
+Voice-cloning TTS backend for https://oguzhan-kurnaz.github.io/speech-apps.html#cloning.
 Uses [coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2) via the maintained [coqui-tts](https://github.com/idiap/coqui-ai-TTS) package.
 
 The model is licensed under the [Coqui Public Model License](https://coqui.ai/cpml) (non-commercial use only).

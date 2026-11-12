@@ -12,5 +12,5 @@ license: apache-2.0
 short_description: ECAPA-TDNN speaker verification demo
 ---
 
-Speaker verification backend for https://okurnaz2516.github.io/demos.html#verification.
+Speaker verification backend for https://oguzhan-kurnaz.github.io/speech-apps.html#verification.
 Uses the [speechbrain/spkrec-ecapa-voxceleb](https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb) model.

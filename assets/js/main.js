@@ -63,7 +63,7 @@
       $("heroActions").innerHTML =
         `<a class="btn primary" href="${esc(L(S.cv))}" download>${icons.download}${t("btn.cv")}</a>` +
         `<a class="btn" href="mailto:${esc(S.email)}">${icons.mail}${t("btn.mail")}</a>` +
-        `<a class="btn" href="demos.html">${icons.wave}${t("btn.demos")}</a>` +
+        `<a class="btn" href="speech-apps.html">${icons.wave}${t("btn.demos")}</a>` +
         ext;
     }
     if ($("about-text")) $("about-text").innerHTML = L(S.about).map((p) => `<p>${p}</p>`).join("");

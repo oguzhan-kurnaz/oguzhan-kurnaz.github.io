@@ -17,7 +17,7 @@ window.SITE = {
     linkedin: "",
   },
 
-  // Speech Apps (demos.html): most demos run entirely in the visitor's browser.
+  // Speech Apps (speech-apps.html): most demos run entirely in the visitor's browser.
   // Voice conversion and voice cloning need a server; their tabs stay hidden
   // until a Hugging Face Space id ("username/space-name") is filled in here.
   // See spaces/README.md for how to deploy them.

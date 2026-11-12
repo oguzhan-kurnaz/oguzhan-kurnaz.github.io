@@ -1,6 +1,6 @@
 """Voice conversion demo: kNN-VC (WavLM features + nearest-neighbour matching + HiFi-GAN).
 
-Endpoint /convert (called from demos.html):
+Endpoint /convert (called from speech-apps.html):
     inputs:  source speech, target voice (file paths)
     output:  converted audio (16 kHz WAV)
 """

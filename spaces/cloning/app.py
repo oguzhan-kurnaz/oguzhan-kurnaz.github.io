@@ -1,6 +1,6 @@
 """Voice-cloning TTS demo: zero-shot XTTS-v2.
 
-Endpoint /synthesize (called from demos.html):
+Endpoint /synthesize (called from speech-apps.html):
     inputs:  text, reference voice (file path), language code
     output:  synthesized audio (24 kHz WAV)
 

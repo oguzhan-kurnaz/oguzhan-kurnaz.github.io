@@ -1,4 +1,4 @@
-"""Smoke-test the deployed Spaces with the same endpoints demos.html uses.
+"""Smoke-test the deployed Spaces with the same endpoints speech-apps.html uses.
 
     pip install gradio_client
     python spaces/test_spaces.py USER/speaker-verification USER/voice-conversion USER/voice-cloning-tts a.wav b.wav

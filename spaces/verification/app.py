@@ -1,6 +1,6 @@
 """Speaker verification demo: ECAPA-TDNN embeddings + cosine similarity.
 
-Endpoint /verify (called from demos.html):
+Endpoint /verify (called from speech-apps.html):
     inputs:  enrollment audio, test audio (file paths)
     output:  {"score": float, "threshold": float, "same": bool}
 """
