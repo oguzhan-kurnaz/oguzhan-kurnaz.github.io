@@ -1,11 +1,11 @@
-// Speech Lab page: live spectrogram, record/upload slots, and the demo tabs.
+// Speech Apps page: live spectrogram, record/upload slots, and the demo tabs.
 // Browser demos call assets/js/lab-worker.js; the optional server demos call Gradio apps on
 // Hugging Face Spaces (ids in data.js, see spaces/README.md).
 (function () {
   const GRADIO_CLIENT = "https://cdn.jsdelivr.net/npm/@gradio/client@1.8.0/dist/index.min.js";
 
   Object.assign(window.UI_STRINGS.en, {
-    "d.title": "Speech Lab",
+    "d.title": "Speech Apps",
     "d.lead": "Try the technology I work on. Unless marked otherwise, every demo runs entirely in your browser: your recordings never leave your device. Models are downloaded on first use and then cached.",
     "d.sp.tab": "Live spectrogram", "d.sp.sub": "See your voice · no download",
     "d.asr.tab": "Speech to text", "d.asr.sub": "Whisper · Turkish & English",
@@ -78,7 +78,7 @@
     "d.unsupported": "Your browser does not support this demo. Please try a recent version of Chrome, Edge, Firefox or Safari.",
   });
   Object.assign(window.UI_STRINGS.tr, {
-    "d.title": "Ses Lab",
+    "d.title": "Ses Uygulamaları",
     "d.lead": "Üzerinde çalıştığım teknolojileri kendiniz deneyin. Aksi belirtilmedikçe her demo tamamen tarayıcınızda çalışır; kayıtlarınız cihazınızdan çıkmaz. Modeller ilk kullanımda bir kez indirilir ve önbelleğe alınır.",
     "d.sp.tab": "Canlı spektrogram", "d.sp.sub": "Sesinizi görün · indirme yok",
     "d.asr.tab": "Konuşmadan metne", "d.asr.sub": "Whisper · Türkçe ve İngilizce",

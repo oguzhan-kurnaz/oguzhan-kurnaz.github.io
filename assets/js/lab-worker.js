@@ -1,4 +1,4 @@
-// Speech Lab model worker. Runs every model off the main thread so the page stays responsive.
+// Speech Apps model worker. Runs every model off the main thread so the page stays responsive.
 // Libraries and model weights are fetched on first use and then served from the browser cache.
 //
 // Tasks (message { id, task, ...payload } -> { id, type: "progress" | "result" | "error", ... }):
