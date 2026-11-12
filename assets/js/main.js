@@ -5,24 +5,24 @@
 
   const UI = {
     en: {
-      "nav.about": "About", "nav.research": "Research", "nav.publications": "Publications", "nav.cv": "CV", "nav.demos": "Demos",
+      "nav.about": "About", "nav.research": "Research", "nav.publications": "Publications", "nav.cv": "CV", "nav.demos": "Speech Lab", "nav.teaching": "Courses",
       "sec.about": "About", "sec.interests": "Research interests", "sec.news": "News", "sec.projects": "Research projects",
       "sec.publications": "Publications", "sec.experience": "Experience", "sec.education": "Education",
       "sec.teaching": "Teaching", "sec.certificates": "Certificates",
-      "banner.title": "Try the speech demos",
-      "banner.text": "Speaker verification, voice conversion and voice-cloning TTS — right in your browser.",
-      "btn.cv": "Download CV", "btn.mail": "Email", "btn.demos": "Speech demos",
+      "banner.title": "Speech Lab: try it yourself",
+      "banner.text": "Speaker verification, deepfake detection, text-to-speech and speech recognition, running in your browser.",
+      "btn.cv": "Download CV", "btn.mail": "Email", "btn.demos": "Speech Lab",
       "pub.all": "All", "pub.journal": "Journal", "pub.conference": "Conference", "pub.review": "Under review",
       "present": "Present",
     },
     tr: {
-      "nav.about": "Hakkımda", "nav.research": "Araştırma", "nav.publications": "Yayınlar", "nav.cv": "Özgeçmiş", "nav.demos": "Demolar",
+      "nav.about": "Hakkımda", "nav.research": "Araştırma", "nav.publications": "Yayınlar", "nav.cv": "Özgeçmiş", "nav.demos": "Ses Lab", "nav.teaching": "Dersler",
       "sec.about": "Hakkımda", "sec.interests": "Araştırma ilgi alanları", "sec.news": "Haberler", "sec.projects": "Araştırma projeleri",
       "sec.publications": "Yayınlar", "sec.experience": "Deneyim", "sec.education": "Eğitim",
       "sec.teaching": "Verilen dersler", "sec.certificates": "Sertifikalar",
-      "banner.title": "Konuşma demolarını deneyin",
-      "banner.text": "Konuşmacı doğrulama, ses dönüştürme ve ses klonlamalı metinden konuşma — doğrudan tarayıcınızda.",
-      "btn.cv": "Özgeçmişi indir", "btn.mail": "E-posta", "btn.demos": "Konuşma demoları",
+      "banner.title": "Ses Lab: kendiniz deneyin",
+      "banner.text": "Konuşmacı doğrulama, sahte ses tespiti, metinden konuşma ve konuşma tanıma, doğrudan tarayıcınızda.",
+      "btn.cv": "Özgeçmişi indir", "btn.mail": "E-posta", "btn.demos": "Ses Lab",
       "pub.all": "Tümü", "pub.journal": "Dergi", "pub.conference": "Konferans", "pub.review": "Değerlendirmede",
       "present": "Günümüz",
     },
@@ -63,11 +63,9 @@
       $("heroActions").innerHTML =
         `<a class="btn primary" href="${esc(L(S.cv))}" download>${icons.download}${t("btn.cv")}</a>` +
         `<a class="btn" href="mailto:${esc(S.email)}">${icons.mail}${t("btn.mail")}</a>` +
-        // Demos hidden until the Hugging Face Spaces are deployed (see spaces/README.md):
-        // `<a class="btn" href="demos.html">${icons.wave}${t("btn.demos")}</a>` +
+        `<a class="btn" href="demos.html">${icons.wave}${t("btn.demos")}</a>` +
         ext;
     }
-    if ($("stats")) $("stats").innerHTML = S.stats.map((s) => `<div class="stat"><b>${esc(s.value)}</b><span>${esc(L(s.label))}</span></div>`).join("");
     if ($("about-text")) $("about-text").innerHTML = L(S.about).map((p) => `<p>${p}</p>`).join("");
     if ($("interests")) $("interests").innerHTML = L(S.interests).map((i) => `<li>${esc(i)}</li>`).join("");
     if ($("news")) $("news").innerHTML = S.news.map((n) => `<li><time>${esc(n.date)}</time><p>${L(n.text)}</p></li>`).join("");
@@ -130,5 +128,5 @@
     document.querySelectorAll("#nav a").forEach((a) => a.addEventListener("click", () => $("nav").classList.remove("open")));
   });
 
-  window.SiteI18n = { get lang() { return lang; }, t, L };
+  window.SiteI18n = { get lang() { return lang; }, t, L, esc };
 })();

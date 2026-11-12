@@ -1,10 +1,14 @@
-# Demo backends (Hugging Face Spaces)
+# Server-side demos (Hugging Face Spaces)
 
-`demos.html` sends audio to three Gradio apps on Hugging Face Spaces. Each folder here is one Space.
+Most Speech Lab demos (`demos.html`) run entirely in the browser (see `assets/js/lab-worker.js`):
+spectrogram, speech recognition (Whisper), text-to-speech (Piper), speaker verification (WavLM) and
+deepfake detection (AASIST, `assets/models/aasist.onnx`). They need no server.
 
-> **Status:** not deployed. Gradio Spaces (even on free `cpu-basic`) require a Hugging Face PRO subscription,
-> so the demo links on the site are commented out for now. To enable them, deploy the Spaces, then
-> uncomment the three "Demos hidden" blocks in `index.html` (nav link, banner) and `assets/js/main.js` (hero button).
+Voice conversion and voice cloning are too heavy for the browser. Their tabs stay **hidden** until a
+Space id is set in `assets/js/data.js` → `spaces`. `verification/` is kept for reference only; the site
+no longer uses it.
+
+> Gradio Spaces may require a Hugging Face PRO subscription to run.
 
 | Folder | Suggested Space name | Endpoint | Inputs | Output | Hardware |
 |---|---|---|---|---|---|
@@ -28,7 +32,6 @@ Fill in the Space ids in `assets/js/data.js`:
 
 ```js
 spaces: {
-  verification: "USER/speaker-verification",
   conversion: "USER/voice-conversion",
   cloning: "USER/voice-cloning-tts",
 },

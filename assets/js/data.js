@@ -17,12 +17,13 @@ window.SITE = {
     linkedin: "",
   },
 
-  // Hugging Face Space ids ("username/space-name") that power the demos page.
+  // Speech Lab (demos.html): most demos run entirely in the visitor's browser.
+  // Voice conversion and voice cloning need a server; their tabs stay hidden
+  // until a Hugging Face Space id ("username/space-name") is filled in here.
   // See spaces/README.md for how to deploy them.
   spaces: {
-    verification: "",   // e.g. "oguzhankurnaz/speaker-verification"
-    conversion: "",      // e.g. "oguzhankurnaz/voice-conversion"
-    cloning: "",         // e.g. "oguzhankurnaz/voice-cloning-tts"
+    conversion: "",      // e.g. "oguzhan-kurnaz/voice-conversion"
+    cloning: "",         // e.g. "oguzhan-kurnaz/voice-cloning-tts"
   },
 
   title: { en: "Assistant Professor", tr: "Dr. Öğr. Üyesi" },
@@ -50,13 +51,6 @@ window.SITE = {
     en: ["Spoofing-aware speaker verification", "Anti-spoofing / deepfake speech detection", "Self-supervised speech representations", "Score & embedding fusion", "Machine & deep learning"],
     tr: ["Sahteciliğe duyarlı konuşmacı doğrulama", "Sahte / deepfake konuşma tespiti", "Öz-denetimli konuşma temsilleri", "Skor ve gömme füzyonu", "Makine ve derin öğrenme"],
   },
-  stats: [
-    { value: "14", label: { en: "Published & accepted papers", tr: "Yayımlanmış ve kabul edilmiş yayın" } },
-    { value: "3", label: { en: "International challenges", tr: "Uluslararası yarışma" } },
-    { value: "2214-A", label: { en: "TÜBİTAK research fellowship", tr: "TÜBİTAK araştırma bursu" } },
-    { value: "1001", label: { en: "TÜBİTAK research project", tr: "TÜBİTAK araştırma projesi" } },
-  ],
-
   news: [
     { date: "2026-08", text: { en: "Started as <strong>Assistant Professor</strong> at Bursa Technical University.", tr: "Bursa Teknik Üniversitesi'nde <strong>Dr. Öğr. Üyesi</strong> olarak göreve başladım." } },
     { date: "2026", text: { en: "Paper on joint optimization of speaker and spoof detectors published in <em>IEEE Transactions on Audio, Speech and Language Processing</em>.", tr: "Konuşmacı ve sahtecilik dedektörlerinin birlikte optimizasyonu üzerine makalemiz <em>IEEE Transactions on Audio, Speech and Language Processing</em>'te yayımlandı." } },
@@ -129,5 +123,40 @@ window.SITE = {
     { year: "2025–26", title: { en: "AI and Facilitating Tools — Certificate of Achievement", tr: "Yapay Zekâ ve Kolaylaştırıcı Araçlar — Başarı Belgesi" }, org: { en: "YÖK Data Analysis School", tr: "YÖK Veri Analizi Okulu" } },
     { year: "2024", title: { en: "Statistical Machine Learning", tr: "Statistical Machine Learning" }, org: { en: "University of Eastern Finland", tr: "Doğu Finlandiya Üniversitesi" } },
     { year: "2024", title: { en: "Scientific Presentation", tr: "Scientific Presentation" }, org: { en: "University of Eastern Finland", tr: "Doğu Finlandiya Üniversitesi" } },
+  ],
+
+  // ---------------------------------------------------------------------------
+  // Course notes (teaching.html). See notes/README.md for the full guide.
+  //
+  // 1. Put the files in notes/<course id>/  (e.g. notes/ml-python/week01.pdf)
+  // 2. Add one line per file to that course's `materials` list.
+  //
+  // Material fields:
+  //   week:  number or label shown on the left (optional)
+  //   title: { en, tr } or a plain string
+  //   type:  "slides" | "notes" | "lab" | "homework" | "code" | "exam" | "video" | "link"
+  //   file:  path inside the site (e.g. "notes/ml-python/week01.pdf")  — or —
+  //   url:   any external link (Colab, YouTube, GitHub …)
+  //   date:  "2026-10-07" (optional; items in the last 10 days get a "New" badge)
+  //
+  // Set `active: false` to move a course under "Past courses".
+  // ---------------------------------------------------------------------------
+  courses: [
+    {
+      id: "ml-python",
+      code: "",
+      title: { en: "Machine Learning with Python", tr: "Python ile Makine Öğrenmesi" },
+      term: { en: "Fall 2026", tr: "2026 Güz" },
+      level: { en: "Undergraduate", tr: "Lisans" },
+      active: true,
+      description: {
+        en: "Supervised and unsupervised learning with scikit-learn: data preparation, model training, evaluation and a small end-to-end project.",
+        tr: "scikit-learn ile denetimli ve denetimsiz öğrenme: veri hazırlama, model eğitimi, değerlendirme ve uçtan uca küçük bir proje.",
+      },
+      materials: [
+        // { week: 1, type: "slides", title: { en: "Introduction", tr: "Giriş" }, file: "notes/ml-python/week01.pdf", date: "2026-09-29" },
+        // { week: 1, type: "code", title: "Colab: first model", url: "https://colab.research.google.com/..." },
+      ],
+    },
   ],
 };

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Courses · Oğuzhan Kurnaz</title>
+  <meta name="description" content="Course pages, lecture notes, slides and lab materials by Oğuzhan Kurnaz, Bursa Technical University.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231F3A5F'/><text x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='white' text-anchor='middle'>OK</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html">Oğuzhan Kurnaz</a>
+      <nav class="nav" id="nav">
+        <a href="index.html#about" data-i18n="nav.about">About</a>
+        <a href="index.html#research" data-i18n="nav.research">Research</a>
+        <a href="index.html#publications" data-i18n="nav.publications">Publications</a>
+        <a href="index.html#cv" data-i18n="nav.cv">CV</a>
+        <a href="teaching.html" class="active" data-i18n="nav.teaching">Courses</a>
+        <a href="demos.html" class="nav-demo" data-i18n="nav.demos">Speech Lab</a>
+      </nav>
+      <div class="tools">
+        <button class="tool" id="langBtn" type="button" aria-label="Language">TR</button>
+        <button class="tool" id="themeBtn" type="button" aria-label="Theme">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="tool menu-btn" id="menuBtn" type="button" aria-label="Menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <h1 data-i18n="c.title">Courses</h1>
+        <p data-i18n="c.lead">Lecture notes, slides, lab sheets and assignments for the courses I teach. Materials are added during the semester.</p>
+      </div>
+    </section>
+
+    <section class="section course-section">
+      <div class="wrap">
+        <div class="course-tools">
+          <input type="search" id="courseSearch" class="search" autocomplete="off">
+        </div>
+        <div id="courses"></div>
+        <div id="pastCourses"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> Oğuzhan Kurnaz</span>
+      <a id="footerMail"></a>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/teaching.js"></script>
+</body>
+</html>
